@@ -1,0 +1,13 @@
+service: t4t-serverless-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  createProduct: handler
+  api:
+    handler: index.handler
+    events:
+      - httpApi: "*"
